@@ -40,13 +40,17 @@ let image = new Image();
       scores = scores[0];
       predicted = scores.indexOf(Math.max(...scores));
       console.log(scores);
+      let fn = Math.round((scores[0] + Number.EPSILON) * 100) / 100 * 100;
+      let fn2 = Math.round((scores[1] + Number.EPSILON) * 100) / 100 * 100;
+      console.log("Dog " + Math.round((scores[1] + Number.EPSILON) * 100) / 100);
+      console.log("Cat " + Math.round((scores[0] + Number.EPSILON) * 100) / 100);
+      
       if(scores[0] < scores[1]){
-        result.innerHTML = "Это собака!";
-        console.log("Dog");
+        result.innerHTML = "На картинке собака с вероятностью " + fn2 + "%";
+        
       } 
       if(scores[0] > scores[1]) {
-        result.innerHTML = "Это кошка!";
-        console.log("Cat");
+        result.innerHTML = "На картинке кошка с вероятностью " + fn + "%";
       }
     });
 });

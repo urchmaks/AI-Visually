@@ -114,6 +114,7 @@ function draw(e) {
   // clear canvas
 function erase() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    document.getElementById('result').innerHTML = "";
   }
 
   // defines a TF model load function
@@ -151,7 +152,8 @@ async function predictModel(){
     y = model.predict(image);
     
     // replaces the text in the result tag by the model prediction
-    document.getElementById('result').innerHTML = "Предсказание: " + y.argMax(1).dataSync();
+    document.getElementById('result').innerHTML = "Это похоже на " + y.argMax(1).dataSync();
+
 }
 
 }
