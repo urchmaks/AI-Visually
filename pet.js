@@ -17,6 +17,7 @@ let image = new Image();
     
     ctx.clearRect(0, 0, 128, 128);
     spin.classList.add('spinner-border', 'text-primary', 'm-3');
+    result.innerHTML = "Загрузка...";
     const fileList = event.target.files;
     console.log(fileList[0].size);
     const url = URL.createObjectURL(fileList[0]);
