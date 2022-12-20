@@ -54,8 +54,8 @@ function setPosition(e) {
   }
   function setPositionTouch(e) {
     var touch = e.touches[0];
-        pos.x = touch.clientX - ctx.canvas.offsetLeft;
-        pos.y = touch.clientY - ctx.canvas.offsetTop;
+        pos.x = touch.pageX - ctx.canvas.offsetLeft;
+        pos.y = touch.pageY - ctx.canvas.offsetTop;
   }
 
 // draws a line in a canvas if mouse is pressed
