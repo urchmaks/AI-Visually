@@ -15,6 +15,7 @@ let image = new Image();
   const fileSelector = document.getElementById('file-selector');
   fileSelector.addEventListener('change', (event) => {
     
+    ctx.clearRect(0, 0, 128, 128);
     spin.classList.add('spinner-border', 'text-primary', 'm-3');
     const fileList = event.target.files;
     console.log(fileList[0].size);
