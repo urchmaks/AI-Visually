@@ -34,13 +34,16 @@
       </div>
         <!-- Defines the container with the predictand erase buttons, and the canvas to draw a digit -->
         <div class="container">
-          <main class="border-top border-bottom text-center p-3 d-block">
-            <div>
-                <canvas class="rounded" id="output" width="128" height="128"></canvas>
-            </div>
-            <input type="file" id="file-selector">
-            <p id="result">Загрузите файл</p>
-              
+          <main class="text-center align-items-center">
+            <div >
+              <div id="spin" class="" role="status">
+                <span class="sr-only"></span>
+              </div>
+              <canvas class="rounded" id="output" width="128" height="128"></canvas>
+            </div> 
+              <input class="" type="file" id="file-selector">
+              <p id="result">Загрузите файл</p>
+            
           </main>
         </div>
     

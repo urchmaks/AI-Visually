@@ -13,3 +13,7 @@
 .dropdown-toggle {
   outline: 0;
 }
+#file-selector {
+  text-align: center;
+  margin: auto;
+}

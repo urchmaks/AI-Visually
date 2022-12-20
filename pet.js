@@ -4,8 +4,10 @@ window.onload=function(){
   tf.loadLayersModel('pet_model/model.json').then(function(model) {
   window.model = model;});
 let result = document.getElementById("result");
-  const canvas = document.getElementById("output");
+const canvas = document.getElementById("output");
 const ctx = canvas.getContext("2d");
+
+let spin = document.getElementById("spin");
 
 let image = new Image();
 
@@ -13,7 +15,7 @@ let image = new Image();
   const fileSelector = document.getElementById('file-selector');
   fileSelector.addEventListener('change', (event) => {
     
-
+    spin.classList.add('spinner-border', 'text-primary', 'm-3');
     const fileList = event.target.files;
     console.log(fileList[0].size);
     const url = URL.createObjectURL(fileList[0]);
@@ -22,6 +24,7 @@ let image = new Image();
     image.addEventListener("load", () => {
     ctx.drawImage(image, 0, 0, 128, 128);
     const imageData = ctx.getImageData(0, 0, 128, 128).data;
+    spin.classList.remove('spinner-border', 'text-primary', 'm-3');
 
     console.log(imageData.length);
     let input = [];

@@ -48,8 +48,8 @@ function setPosition(e) {
 
     
     
-        pos.x = e.clientX - ctx.canvas.offsetLeft;
-        pos.y = e.clientY - ctx.canvas.offsetTop;
+        pos.x = e.pageX - ctx.canvas.offsetLeft;
+        pos.y = e.pageY - ctx.canvas.offsetTop;
     
   }
   function setPositionTouch(e) {
