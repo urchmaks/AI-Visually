@@ -72,8 +72,8 @@ function draw(e) {
     
       // attributes of the line
       ctx.lineWidth = 40;
-      ctx.lineCap = 'round';
-      ctx.strokeStyle = 'red';
+      ctx.lineCap = "round";
+      ctx.strokeStyle = "#0d6efd";
   
       // get current position, move to new position, create line from current to new
       ctx.moveTo(pos.x, pos.y);
@@ -99,7 +99,7 @@ function draw(e) {
       // attributes of the line
       ctx.lineWidth = 40;
       ctx.lineCap = 'round';
-      ctx.strokeStyle = 'red';
+      ctx.strokeStyle = 'blue';
   
       // get current position, move to new position, create line from current to new
       ctx.moveTo(pos.x, pos.y);
